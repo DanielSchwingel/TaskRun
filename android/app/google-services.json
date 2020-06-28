@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "728526210462",
+    "firebase_url": "https://taskrun-12dbb.firebaseio.com",
+    "project_id": "taskrun-12dbb",
+    "storage_bucket": "taskrun-12dbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728526210462:android:b4973350d5c858c693428f",
+        "android_client_info": {
+          "package_name": "com.taskrun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728526210462-q7jisje6bi2lf5fqqc9r1mr7cfq5a6ej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqiO9X09Ew7B-JXLc5LblLNtdqh5x4iZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728526210462-q7jisje6bi2lf5fqqc9r1mr7cfq5a6ej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
