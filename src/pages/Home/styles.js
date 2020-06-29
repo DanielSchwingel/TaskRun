@@ -9,7 +9,7 @@ export default StyleSheet.create({
     },
 
     imageLogo : {
-        marginTop: 50, 
+        marginTop: 30, 
         marginBottom: 20
     },
 
@@ -72,4 +72,20 @@ export default StyleSheet.create({
         fontSize: 16,
         marginRight: 15
     },
+
+    footer : {
+        alignItems: 'center',
+    },
+
+    textSocialLogin : {
+        fontFamily: 'Ubuntu-Regular',
+        fontSize: 12, 
+        color: '#281b1b',
+    },
+    
+    buttonSocial : {
+        margin : 20,
+    }
+
+
 })
