@@ -3,7 +3,7 @@ import { ImageBackground, Image, Text, TouchableOpacity, View } from 'react-nati
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import TouchID from 'react-native-touch-id';
 import auth from '@react-native-firebase/auth';
-import { GoogleSignin, us } from '@react-native-community/google-signin';
+import { GoogleSignin } from '@react-native-community/google-signin';
 
 import styles from './styles';
 import imageBackground from '../../assets/images/background-home.png';
@@ -19,13 +19,8 @@ const Home = () => {
     const [supported, setSupported] = useState(false);
 
     async function onGoogleButtonPress() {
-        // Get the users ID token
-        const userLogin = await GoogleSignin.signIn();
-        
-        // Create a Google credential with the token
+        const userLogin = await GoogleSignin.signIn();        
         const googleCredential = auth.GoogleAuthProvider.credential(userLogin.idToken);
-      
-        // Sign-in the user with the credential
         return auth().signInWithCredential(googleCredential);
     }
 
@@ -39,7 +34,16 @@ const Home = () => {
             })
     }, []);
 
-    function handleLogin() {
+    useEffect(() =>{
+        if (auth().currentUser === null) {
+            alert('não logado');
+            // auth().currentUser.email
+        }else{
+            alert(auth().currentUser.email);
+        }
+    }, []);
+
+    function handleTouchID() {
         const configTouchID = {
             title: 'TaskRun',
             imageColor: '#485E80', 
@@ -64,7 +68,7 @@ const Home = () => {
             <Text style={[styles.description, {maxWidth: 220}]}>O “ToDo” mais simples, interarativo e fácil de manusear. Não postergue, realize.</Text>
             <Text style={styles.description}>Bora lá!</Text>
             <View style={styles.buttonGrid}>
-                <TouchableOpacity style={styles.buttonBiometry} onPress={handleLogin}>
+                <TouchableOpacity style={styles.buttonBiometry} onPress={handleTouchID}>
                     <Icon name={'fingerprint'} size={28} color='#F45656'/>
                     <Text style={styles.textButtonBiometry}>Biometria</Text>
                 </TouchableOpacity>
