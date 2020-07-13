@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import Header from '../../components/Header';
 import Cards from '../../components/Cards';
@@ -19,6 +20,10 @@ export default function Profile() {
             </View>
             <Text style={styles.title}>Minhas tarefas</Text>
             <Cards />
+            <TouchableOpacity style={styles.button} onPress={()=>{}}>
+                <Icon name={'plus'} size={28} color='#FFF' />
+            </TouchableOpacity>
+            <Text style={styles.buttonDescription}>Nova tarefa</Text>
         </View>
         
 

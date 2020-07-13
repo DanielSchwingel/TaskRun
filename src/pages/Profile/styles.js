@@ -33,4 +33,17 @@ export default StyleSheet.create({
         fontFamily: 'Ubuntu-Medium',
         fontSize: 16
     },
+    button : {
+        backgroundColor: '#5B2121',
+        padding: 15,
+        alignItems: 'center',
+        borderRadius: 90,
+        marginTop: 20
+    },
+
+    buttonDescription: {
+        color: '#9E7D7B',
+        fontFamily: 'Ubuntu-Regular',
+        fontSize: 14
+    }
 })

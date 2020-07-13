@@ -40,9 +40,11 @@ export default StyleSheet.create({
     titleCard : {
         fontFamily: 'Ubuntu-Medium',
         fontSize: 15,
+        marginTop: 15
     },
     descriptionCard : {
         fontFamily: 'Ubuntu-Regular',
-        fontSize: 10,
+        fontSize: 11,
+        marginTop: 5
     }
 })
